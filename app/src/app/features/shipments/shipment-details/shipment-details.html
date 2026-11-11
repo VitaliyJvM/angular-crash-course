@@ -1,0 +1,35 @@
+<p><a routerLink="/shipments">← Back to shipments</a></p>
+
+@if (store.loading()) {
+  <p role="status">Loading shipment…</p>
+} @else if (store.error(); as message) {
+  <p class="error" role="alert">{{ message }}</p>
+} @else if (shipment(); as shipment) {
+  <h2>{{ shipment.trackingNumber }}</h2>
+
+  <dl>
+    <dt>Carrier</dt>
+    <dd>{{ shipment.carrier }}</dd>
+    <dt>Status</dt>
+    <dd>{{ shipment.status }}</dd>
+    <dt>Created</dt>
+    <dd>{{ shipment.createdAt | date: 'medium' }}</dd>
+  </dl>
+
+  @if (shipment.status !== 'DELIVERED') {
+    <button type="button" (click)="store.markDelivered(shipment.id)">Mark delivered</button>
+  }
+
+  <h3>Tracking events</h3>
+  <ol>
+    @for (event of shipment.events ?? []; track event.timestamp) {
+      <li>
+        {{ event.timestamp | date: 'short' }} · {{ event.location }} — {{ event.description }}
+      </li>
+    } @empty {
+      <li class="muted">No tracking events yet.</li>
+    }
+  </ol>
+} @else {
+  <p class="error" role="alert">Shipment #{{ id() }} not found.</p>
+}

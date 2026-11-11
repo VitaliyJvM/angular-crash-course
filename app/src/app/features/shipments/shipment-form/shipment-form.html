@@ -1,0 +1,47 @@
+<h2>New shipment</h2>
+
+<form class="form" [formRoot]="shipmentForm">
+  <div class="field">
+    <label for="trackingNumber">Tracking number</label>
+    <input
+      id="trackingNumber"
+      type="text"
+      placeholder="PF-1234"
+      aria-describedby="trackingNumber-errors"
+      [formField]="shipmentForm.trackingNumber"
+    />
+    <div id="trackingNumber-errors" aria-live="polite">
+      @if (shipmentForm.trackingNumber().touched() && shipmentForm.trackingNumber().invalid()) {
+        @for (error of shipmentForm.trackingNumber().errors(); track error.kind) {
+          <p class="error">{{ error.message }}</p>
+        }
+      }
+    </div>
+  </div>
+
+  <div class="field">
+    <label for="carrier">Carrier</label>
+    <select id="carrier" aria-describedby="carrier-errors" [formField]="shipmentForm.carrier">
+      <option value="">Select a carrier</option>
+      @for (carrier of carriers; track carrier) {
+        <option [value]="carrier">{{ carrier }}</option>
+      }
+    </select>
+    <div id="carrier-errors" aria-live="polite">
+      @if (shipmentForm.carrier().touched() && shipmentForm.carrier().invalid()) {
+        @for (error of shipmentForm.carrier().errors(); track error.kind) {
+          <p class="error">{{ error.message }}</p>
+        }
+      }
+    </div>
+  </div>
+
+  <div class="actions">
+    <button type="submit">Add shipment</button>
+    <a routerLink="/shipments">Cancel</a>
+  </div>
+</form>
+
+<p class="muted">
+  There is no backend: the shipment is added in memory and disappears after a page reload.
+</p>

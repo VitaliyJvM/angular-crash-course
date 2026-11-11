@@ -1,0 +1,16 @@
+<article class="card">
+  <div>
+    <a [routerLink]="['/shipments', shipment().id]">
+      <strong>{{ shipment().trackingNumber }}</strong>
+    </a>
+    <span class="muted"> · {{ shipment().carrier }} · {{ shipment().createdAt | date: 'mediumDate' }}</span>
+  </div>
+
+  <div class="card-actions">
+    <span class="status" [class]="'status-' + shipment().status">{{ shipment().status }}</span>
+
+    @if (shipment().status !== 'DELIVERED') {
+      <button type="button" (click)="delivered.emit(shipment().id)">Mark delivered</button>
+    }
+  </div>
+</article>

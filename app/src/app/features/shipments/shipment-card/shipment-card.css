@@ -1,0 +1,31 @@
+.card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  padding: 12px;
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+}
+
+.card-actions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.status {
+  padding: 2px 8px;
+  border-radius: 999px;
+  font-size: 0.8rem;
+  background: #eaeef2;
+}
+
+.status-IN_TRANSIT {
+  background: #ddf4ff;
+}
+
+.status-DELIVERED {
+  background: #dafbe1;
+}

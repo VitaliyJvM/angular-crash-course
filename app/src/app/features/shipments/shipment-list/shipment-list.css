@@ -1,0 +1,26 @@
+.filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+
+.filters .active {
+  border-color: var(--accent);
+  color: var(--accent);
+  font-weight: 600;
+}
+
+.shipments {
+  display: grid;
+  gap: 8px;
+  padding: 0;
+  list-style: none;
+}
+
+.search {
+  display: grid;
+  gap: 4px;
+  margin-bottom: 12px;
+  max-width: 320px;
+}

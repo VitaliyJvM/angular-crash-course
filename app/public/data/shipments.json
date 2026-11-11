@@ -1,0 +1,58 @@
+[
+  {
+    "id": 1,
+    "trackingNumber": "PF-1001",
+    "carrier": "Nova Poshta",
+    "status": "IN_TRANSIT",
+    "createdAt": "2026-11-02T09:15:00Z",
+    "events": [
+      { "timestamp": "2026-11-02T09:15:00Z", "location": "Kyiv", "description": "Shipment created" },
+      { "timestamp": "2026-11-03T06:40:00Z", "location": "Kyiv", "description": "Departed sorting center" },
+      { "timestamp": "2026-11-04T13:05:00Z", "location": "Lviv", "description": "Arrived at regional hub" }
+    ]
+  },
+  {
+    "id": 2,
+    "trackingNumber": "PF-1002",
+    "carrier": "DHL",
+    "status": "DELIVERED",
+    "createdAt": "2026-10-28T14:40:00Z",
+    "events": [
+      { "timestamp": "2026-10-28T14:40:00Z", "location": "Warsaw", "description": "Shipment created" },
+      { "timestamp": "2026-10-30T10:00:00Z", "location": "Lviv", "description": "Customs cleared" },
+      { "timestamp": "2026-10-31T16:20:00Z", "location": "Kyiv", "description": "Delivered to recipient" }
+    ]
+  },
+  {
+    "id": 3,
+    "trackingNumber": "PF-1003",
+    "carrier": "Ukrposhta",
+    "status": "CREATED",
+    "createdAt": "2026-11-08T08:05:00Z",
+    "events": [
+      { "timestamp": "2026-11-08T08:05:00Z", "location": "Odesa", "description": "Shipment created" }
+    ]
+  },
+  {
+    "id": 4,
+    "trackingNumber": "PF-1004",
+    "carrier": "DHL",
+    "status": "IN_TRANSIT",
+    "createdAt": "2026-11-05T17:30:00Z",
+    "events": [
+      { "timestamp": "2026-11-05T17:30:00Z", "location": "Berlin", "description": "Shipment created" },
+      { "timestamp": "2026-11-07T09:10:00Z", "location": "Krakow", "description": "In transit" }
+    ]
+  },
+  {
+    "id": 5,
+    "trackingNumber": "PF-1005",
+    "carrier": "Nova Poshta",
+    "status": "DELIVERED",
+    "createdAt": "2026-10-30T11:20:00Z",
+    "events": [
+      { "timestamp": "2026-10-30T11:20:00Z", "location": "Dnipro", "description": "Shipment created" },
+      { "timestamp": "2026-11-01T12:45:00Z", "location": "Kharkiv", "description": "Delivered to parcel locker" }
+    ]
+  }
+]

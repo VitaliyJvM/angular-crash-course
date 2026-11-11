@@ -1,0 +1,49 @@
+<h2>Shipments</h2>
+
+@if (store.loading()) {
+  <p role="status">Loading shipments…</p>
+} @else if (store.error(); as message) {
+  <p class="error" role="alert">{{ message }}</p>
+  <button type="button" (click)="store.load()">Retry</button>
+} @else if (store.shipments().length === 0) {
+  <p class="muted">No shipments yet.</p>
+} @else {
+  <p class="muted">
+    Total: {{ counters().total }} · In transit: {{ counters().inTransit }} · Delivered:
+    {{ counters().delivered }}
+  </p>
+
+  <div class="filters" role="group" aria-label="Filter by status">
+    @for (option of filterOptions; track option) {
+      <button
+        type="button"
+        [class.active]="statusFilter() === option"
+        [attr.aria-pressed]="statusFilter() === option"
+        (click)="statusFilter.set(option)"
+      >
+        {{ option }}
+      </button>
+    }
+  </div>
+
+  <label class="search">
+    Search by tracking number
+    <input
+      #searchInput
+      type="search"
+      placeholder="PF-1001"
+      [value]="searchTerm()"
+      (input)="searchTerm.set(searchInput.value)"
+    />
+  </label>
+
+  <ul class="shipments">
+    @for (shipment of filteredShipments(); track shipment.id) {
+      <li>
+        <app-shipment-card [shipment]="shipment" (delivered)="store.markDelivered($event)" />
+      </li>
+    } @empty {
+      <li class="muted">No shipments match the current filters.</li>
+    }
+  </ul>
+}

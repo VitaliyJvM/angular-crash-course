@@ -1,0 +1,37 @@
+# Dependencies
+node_modules/
+
+# Build output and Angular caches
+dist/
+out-tsc/
+.angular/
+coverage/
+__screenshots__/
+
+# Logs
+npm-debug.log*
+yarn-error.log*
+*.log
+
+# Local environment / secrets
+.env
+.env.*
+!.env.example
+
+# IDEs and editors
+.idea/
+*.iml
+.vscode/*
+!.vscode/extensions.json
+!.vscode/launch.json
+!.vscode/tasks.json
+*.swp
+.history/
+
+# Local tool configuration (machine-specific)
+.mcp.json
+.claude/settings.local.json
+
+# System files
+.DS_Store
+Thumbs.db

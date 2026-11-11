@@ -1,0 +1,21 @@
+<header class="app-header">
+  <h1>{{ title() }}</h1>
+
+  <nav aria-label="Main">
+    <a
+      routerLink="/shipments"
+      routerLinkActive="active"
+      ariaCurrentWhenActive="page"
+      [routerLinkActiveOptions]="{ exact: true }"
+    >
+      Shipments
+    </a>
+    <a routerLink="/shipments/new" routerLinkActive="active" ariaCurrentWhenActive="page">
+      New shipment
+    </a>
+  </nav>
+</header>
+
+<main>
+  <router-outlet />
+</main>
