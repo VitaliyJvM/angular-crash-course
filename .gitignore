@@ -28,6 +28,9 @@ yarn-error.log*
 *.swp
 .history/
 
+# Learner workspace created in lesson 1.2 (ng new ... --directory practice)
+/practice/
+
 # Local tool configuration (machine-specific)
 .mcp.json
 .claude/settings.local.json
