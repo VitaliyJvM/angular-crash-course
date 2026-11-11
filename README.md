@@ -210,3 +210,12 @@ The course uses the current recommended style: standalone components, `inject()`
 - Lessons: [Day 1](docs/en/lessons/day-01-fundamentals/) · [Day 2](docs/en/lessons/day-02-components-state/) · [Day 3](docs/en/lessons/day-03-services-http/) · [Day 4](docs/en/lessons/day-04-routing-forms/) · [Day 5](docs/en/lessons/day-05-quality-interview/)
 - [Reference materials](docs/en/reference/) · [Solutions](exercises/solutions/en/README.md)
 - [Українська версія](README.uk.md)
+
+## License
+
+This repository uses two licenses:
+
+- **Code** (the Angular application in `app/` and the code examples in the lessons) is licensed under the [MIT License](LICENSE).
+- **Educational content** (lessons, explanations, reference materials and documentation, in English and Ukrainian) is licensed under [CC BY 4.0](LICENSE-CONTENT.md): you may share and adapt it, including commercially, as long as you give appropriate credit.
+
+Third-party dependencies, such as Angular and RxJS, remain under their own licenses.

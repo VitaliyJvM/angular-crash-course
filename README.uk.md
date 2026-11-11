@@ -216,3 +216,12 @@ Angular 22.2 · Angular CLI 22.2 · TypeScript 6.0 · RxJS 7.8 · Vitest 5 + jsd
 - Уроки: [Day 1](docs/uk/lessons/day-01-fundamentals/) · [Day 2](docs/uk/lessons/day-02-components-state/) · [Day 3](docs/uk/lessons/day-03-services-http/) · [Day 4](docs/uk/lessons/day-04-routing-forms/) · [Day 5](docs/uk/lessons/day-05-quality-interview/)
 - [Довідкові матеріали](docs/uk/reference/) · [Розв'язки](exercises/solutions/uk/README.md)
 - [English version](README.md)
+
+## Ліцензія
+
+Репозиторій використовує дві ліцензії:
+
+- **Код** (Angular-застосунок в `app/` та приклади коду в уроках) ліцензовано за [MIT License](LICENSE).
+- **Навчальні матеріали** (уроки, пояснення, довідкові матеріали та документація англійською й українською) ліцензовано за [CC BY 4.0](LICENSE-CONTENT.md): їх можна поширювати та адаптувати, зокрема в комерційних цілях, за умови належного зазначення авторства.
+
+Сторонні залежності, зокрема Angular та RxJS, лишаються під власними ліцензіями.
